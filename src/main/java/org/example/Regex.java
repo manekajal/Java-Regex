@@ -5,14 +5,15 @@ import java.util.regex.Pattern;
 
 public class Regex {
     public static void main(String[] args){
-        String line="Kaj";
-        String pattern= "^[A-z]{3}";
+        String firstName="Kaj";
+        String lastName="Man";
+        String pattern= "^[A-z]*[A-Z]{3}";
         Pattern r= Pattern.compile(pattern);
 
-        Matcher m = r.matcher(line);
+        Matcher m = r.matcher(firstName);
 
         if(m.matches()){
-            System.out.println("Matched Pattern:");
+            System.out.println("Matched Pattern:" );
 
         }else
         {
